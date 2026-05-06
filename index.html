@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Quiz Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-view" class="card">
+            <h1>IT Quiz Pro</h1>
+            <p>Enter your name to start the challenge.</p>
+            <input type="text" id="user-name" placeholder="Your Name">
+            <button id="start-btn">Begin Quiz</button>
+        </div>
+
+        <div id="quiz-view" class="card hidden">
+            <div class="header-info">
+                <span id="timer">Time: 15s</span>
+                <span id="q-count">1/20</span>
+            </div>
+            <div class="progress-bar-bg"><div id="progress-fill"></div></div>
+            <h2 id="question-txt">Question loading...</h2>
+            <div id="answer-options" class="answer-grid"></div>
+            <!-- This button text will change dynamically -->
+            <button id="next-btn" class="hidden next-action">Next Question</button>
+        </div>
+
+        <div id="result-view" class="card hidden">
+            <h1>Results</h1>
+            <p id="greet-user"></p>
+            <div class="score-box"><span id="final-score">0</span>/20</div>
+            <p id="high-score-text"></p>
+            <button onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
