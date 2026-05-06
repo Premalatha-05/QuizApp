@@ -1,0 +1,107 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #d946ef;
+    --bg-dark: #0f172a;
+    --card-white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container { width: 90%; max-width: 480px; }
+
+.card {
+    background: var(--card-white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hidden { display: none; }
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 1rem 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.answer-grid { display: grid; gap: 12px; margin: 20px 0; }
+
+.answer-btn {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    color: #1e293b;
+    text-align: left;
+}
+
+/* INTERACTIVE FEEDBACK COLORS */
+.correct { 
+    background: #22c55e !important; 
+    border-color: #16a34a !important; 
+    color: white !important;
+    animation: pulse 0.5s;
+}
+
+.wrong { 
+    background: #ef4444 !important; 
+    border-color: #dc2626 !important; 
+    color: white !important; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.header-info { 
+    display: flex; 
+    justify-content: space-between; 
+    color: var(--primary); 
+    font-weight: bold; 
+}
+.progress-bar-bg { 
+    background: #f1f5f9; 
+    height: 8px; border-radius: 10px; 
+    margin: 10px 0 25px 0; 
+    overflow: hidden; 
+}
+#progress-fill { 
+    background: var(--secondary); 
+    height: 100%;
+    width: 0%; 
+    transition: width 0.4s; 
+}
+.next-action { 
+    background: var(--secondary); 
+    margin-top: 15px; 
+}
+.score-box { 
+    font-size: 4rem; 
+    font-weight: 900; 
+    color: var(--primary); 
+    margin: 15px 0; 
+}
